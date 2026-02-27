@@ -59,6 +59,10 @@ body {
   transition: background 0.2s ease;
 }
 
+.desktop-login {
+  display: none;
+}
+
 .hamburger {
   padding: 0;
   background: none;
@@ -363,6 +367,10 @@ body {
     transition: color 0.2s ease;
   }
 
+  .nav-links .nav-login {
+    display: none;
+  }
+
   .hamburger {
     display: none;
   }
@@ -373,6 +381,12 @@ body {
     padding: 12px 36px;
     font-size: 16px;
     border-radius: 8px;
+  }
+
+  .desktop-login {
+    display: block;
+    width: auto;
+    padding: 12px 36px;
   }
 
   .categories,
