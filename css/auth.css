@@ -1,0 +1,279 @@
+@import url("styles.css");
+
+.auth-left {
+  display: none;
+}
+
+main {
+  padding: 48px 56px;
+  max-width: none;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+}
+
+h2 {
+  display: block;
+  font-size: 24px;
+  color: var(--charcoal-black);
+  font-weight: 600;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.hero-logo {
+  font-family: "Island Moments", cursive;
+  color: var(--primary-orange);
+  font-weight: 400;
+  font-size: 40px;
+  display: block;
+  margin-bottom: 8px;
+  text-align: center;
+
+  animation: fadeUp 0.6s ease forwards;
+  animation-delay: 0.15s;
+  opacity: 0;
+}
+
+.input-group {
+  position: relative;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  border: 1px solid var(--muted-gray);
+}
+
+.input-group input {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 14px 14px 14px 40px;
+  background: transparent;
+  font-size: 14px;
+}
+
+.input-group i {
+  color: var(--dark-gray);
+}
+
+.input-group input::placeholder {
+  color: var(--muted-gray);
+}
+
+.input-group:focus-within {
+  border-color: var(--primary-blue);
+  transition: border-color 0.2s ease;
+}
+
+.ri-mail-fill,
+.ri-lock-fill,
+.ri-phone-fill {
+  font-size: 20px;
+  position: absolute;
+  left: 14px;
+}
+
+.ri-eye-off-fill {
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+}
+
+label {
+  display: block;
+  color: var(--charcoal-black);
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+a.forgot-link {
+  display: block;
+  text-align: right;
+  margin-bottom: 16px;
+  text-decoration: none;
+  color: var(--primary-blue);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.terms {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 16px;
+  text-decoration: none;
+  color: var(--charcoal-black);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.terms a {
+  color: var(--primary-blue);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.social-btn {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid var(--muted-gray);
+  border-radius: 10px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.social-btn:hover {
+  border-color: var(--primary-blue);
+  color: var(--primary-blue);
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.ri-apple-fill {
+  color: var(--charcoal-black);
+  font-size: 20px;
+}
+
+.social-btn:hover .ri-apple-fill {
+  color: var(--charcoal-black);
+  transition: color 0.2s ease;
+}
+
+.ri-facebook-fill {
+  color: var(--primary-blue);
+  font-size: 20px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 16px 0;
+  font-size: 14px;
+  color: var(--muted-gray);
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: var(--muted-gray);
+}
+
+form p {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 14px;
+  color: var(--muted-gray);
+}
+
+form p a {
+  color: var(--primary-blue);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .hero-logo {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 4px;
+    opacity: 1;
+    animation: none;
+  }
+
+  .auth-container {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    min-height: 100vh;
+  }
+
+  .auth-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .auth-left img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+
+  .auth-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-orange);
+    opacity: 0.7;
+
+    z-index: 1;
+  }
+
+  .auth-text {
+    padding: 40px;
+    position: relative;
+    color: var(--pure-white);
+    text-align: left;
+    margin: 0 60px;
+
+    z-index: 2;
+  }
+
+  .auth-text h2 {
+    font-family: "Inter", sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--pure-white);
+  }
+
+  .auth-text p {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.6;
+    color: var(--pure-white);
+  }
+
+  main {
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 48px 80px;
+    max-width: none;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 24px;
+  }
+
+  .footer {
+    display: block;
+  }
+}
