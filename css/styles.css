@@ -80,6 +80,11 @@ body {
   cursor: pointer;
 }
 
+.signin a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .signin:hover {
   background-color: var(--primary-blue);
   color: var(--pure-white);
@@ -107,6 +112,10 @@ body {
   animation: fadeUp 0.6s ease forwards;
   animation-delay: 0.15s;
   opacity: 0;
+}
+
+.logo-link {
+  text-decoration: none;
 }
 
 .main-logo {

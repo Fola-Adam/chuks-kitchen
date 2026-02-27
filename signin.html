@@ -25,19 +25,21 @@
         </div>
 
         <main>
+            <a href="index.html" class="back-link">
+                <i class="ri-arrow-left-line"></i> Back to Home          </a>
             <span class="hero-logo">Chuks Kitchen</span>
             <h2>Login to Your Account</h2>
-            <form>
+            <form onsubmit="window.location.href='home.html'; return false;">
                 <label for="email">Email or phone number</label>
                 <div class="input-group">
                     <i class="ri-mail-fill"></i>
-                    <input type="text" placeholder="name@gmail.com" id="email">
+                    <input type="text" placeholder="name@gmail.com" id="email" required>
                 </div>
 
                 <label for="password">Password</label>
                 <div class="input-group">
                     <i class="ri-lock-fill"></i>
-                    <input type="password" placeholder="********" id="password">
+                    <input type="password" placeholder="********" minlength="8" id="password" required>
                     <i class="ri-eye-off-fill"></i>
                 </div>
 

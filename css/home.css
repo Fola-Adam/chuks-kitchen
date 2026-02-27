@@ -44,6 +44,21 @@ body {
   transition: color 0.2s ease;
 }
 
+.nav-login {
+  display: inline-block;
+  padding: 10px 24px;
+  background: var(--primary-orange);
+  color: var(--pure-white) !important;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.nav-login:hover {
+  background: var(--dark-orange);
+  transition: background 0.2s ease;
+}
+
 .hamburger {
   padding: 0;
   background: none;
@@ -257,7 +272,7 @@ body {
   position: relative;
   overflow: hidden;
   min-height: 300px;
-  margin-top: 150px;
+  margin-top: 40px;
 }
 
 .promo-banner img {
@@ -321,6 +336,11 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 10px 60px;
+  }
+
+  .navbar a {
+    text-decoration: none;
+    color: var(--pure-white);
   }
 
   .nav-links {

@@ -32,7 +32,7 @@
   border: 1px solid var(--muted-gray);
   border-radius: 10px;
   margin-top: 8px;
-  box-shadow: 0 40px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 
   padding: 12px;
@@ -121,7 +121,7 @@
 .menu-section h2 {
   font-family: Inter;
   font-weight: 700;
-  font-style: Bold;
+  font-style: normal;
   font-size: 32px;
   line-height: 42px;
   letter-spacing: 0%;
@@ -152,9 +152,5 @@
 
   .food-card .food-card-body {
     padding: 16px;
-  }
-
-  .view-all {
-    display: none;
   }
 }

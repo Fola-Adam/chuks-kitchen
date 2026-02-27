@@ -14,6 +14,22 @@ main {
   margin: 0;
 }
 
+.back-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--muted-gray);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.back-link:hover {
+  color: var(--primary-orange);
+  transition: color 0.2s ease;
+}
+
 h2 {
   display: block;
   font-size: 24px;
@@ -114,6 +130,14 @@ a.forgot-link {
   color: var(--primary-blue);
   text-decoration: none;
   font-weight: 500;
+}
+
+.input-group:has(input:valid:not(:placeholder-shown)) {
+  border-color: #22c55e;
+}
+
+.input-group:has(input:invalid:not(:placeholder-shown)) {
+  border-color: #ef4444;
 }
 
 .social-btn {
@@ -245,7 +269,7 @@ form p a {
   }
 
   .auth-text h2 {
-    font-family: "Inter", sans-serif;
+    font-family: "Island Moments", cursive;
     font-size: 48px;
     font-weight: 700;
     margin-bottom: 12px;
@@ -275,5 +299,9 @@ form p a {
 
   .footer {
     display: block;
+  }
+
+  .back-link {
+    display: none;
   }
 }
