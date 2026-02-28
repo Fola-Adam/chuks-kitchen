@@ -1,8 +1,8 @@
 # Chuks Kitchen — Frontend Developer Intern Deliverable
 
 **Program:** Trueminds Innovations Internship  
-**Duration:** Feb 13 – Feb 27, 2026
-**Name:** Agbalaya Adam Abdullahi
+**Duration:** Feb 13 – Feb 27, 2026  
+**Name:** Agbalaya Adam Abdullahi  
 **Role:** Frontend Developer  
 
 ---
