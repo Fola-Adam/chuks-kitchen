@@ -7,6 +7,7 @@
 .menu-categories {
   position: relative;
   margin: 32px;
+  z-index: 200;
 }
 
 .categories-toggle {
@@ -40,7 +41,7 @@
   top: 100%;
   left: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 200;
 }
 
 .categories-dropdown.open {
@@ -119,7 +120,7 @@
 }
 
 .menu-section h2 {
-  font-family: Inter;
+  font-family: "Inter", sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 32px;

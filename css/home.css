@@ -10,6 +10,7 @@ body {
   align-items: center;
   padding: 16px 20px;
   position: relative;
+  z-index: 999;
 }
 
 .nav-links {
@@ -89,6 +90,7 @@ body {
   position: relative;
   height: 70vh;
   overflow: hidden;
+  isolation: isolate;
 }
 
 .hero img {
@@ -147,6 +149,12 @@ body {
   padding: 14px 20px;
   margin: -28px 20px 0;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+a.category-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
 .search-bar input {
@@ -324,6 +332,165 @@ body {
   z-index: 100;
 }
 
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Page load animations */
+.navbar {
+  animation: slideDown 0.5s ease forwards;
+}
+
+.hero-content h1 {
+  opacity: 0;
+  animation: fadeUp 0.6s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.hero-content p {
+  opacity: 0;
+  animation: fadeUp 0.6s ease forwards;
+  animation-delay: 0.5s;
+}
+
+.hero-content .primary-btn {
+  opacity: 0;
+  animation: fadeUp 0.6s ease forwards;
+  animation-delay: 0.7s;
+}
+
+.search-bar {
+  opacity: 0;
+  animation: fadeUp 0.6s ease forwards;
+  animation-delay: 0.9s;
+}
+
+/* Scroll animation base state */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered delays for grid children */
+.animate-on-scroll:nth-child(2) {
+  transition-delay: 0.1s;
+}
+.animate-on-scroll:nth-child(3) {
+  transition-delay: 0.2s;
+}
+.animate-on-scroll:nth-child(4) {
+  transition-delay: 0.1s;
+}
+.animate-on-scroll:nth-child(5) {
+  transition-delay: 0.2s;
+}
+.animate-on-scroll:nth-child(6) {
+  transition-delay: 0.3s;
+}
+
+/* Hover lift on cards */
+.category-card {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.food-card {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.food-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Nav link sliding underline */
+.nav-links a {
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-orange);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* Add to cart button pulse */
+.food-card-footer .primary-btn:hover,
+.add-btn:hover {
+  transform: scale(1.05);
+  transition:
+    transform 0.2s ease,
+    background 0.3s ease;
+}
+
+/* Promo banner slide in */
+.promo-content {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+.promo-content.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Footer fade in */
+.footer {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.footer.visible {
+  opacity: 1;
+}
+
 @media (min-width: 768px) {
   .grid-3 {
     display: grid;
@@ -340,11 +507,6 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 10px 60px;
-  }
-
-  .navbar a {
-    text-decoration: none;
-    color: var(--pure-white);
   }
 
   .nav-links {

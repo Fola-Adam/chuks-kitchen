@@ -30,7 +30,7 @@
             
             
             <div class="mobile-actions">
-                <button class="signin">Sign In</button>
+                <button class="signin" onclick="window.location.href='signin.html'">Sign In</button>
             </div>
             
             <div class="hero-text">
@@ -105,9 +105,17 @@
         </div>
     </footer>
 
-    <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-        <i class="ri-arrow-up-line"></i>
-    </button>
+    <script src="js/toast.js"></script>
+    <script>
+      const learnMore = document.querySelector('.secondary-btn');
+      if (learnMore) {
+        learnMore.addEventListener('click', function(e) {
+          e.preventDefault();
+          showToast('More about us coming soon!', 'neutral');
+        });
+      }
+    </script>
+
 
 </body>
 </html>
